@@ -80,11 +80,11 @@ const ViewMarkSheetForm = () => {
       [name]: value,
     }));
   };
-const scholasticAreasData = [
-  { subject: "Subject 1", term1: "Marks1", term2: "Marks2", total: "Total" },
-  { subject: "Subject 2", term1: "Marks1", term2: "Marks2", total: "Total" },
-  // Add more subjects and marks as needed
-];
+  const scholasticAreasData = [
+    { subject: "Subject 1", term1: "Marks1", term2: "Marks2", total: "Total" },
+    { subject: "Subject 2", term1: "Marks1", term2: "Marks2", total: "Total" },
+    // Add more subjects and marks as needed
+  ];
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -193,7 +193,7 @@ const scholasticAreasData = [
               value={formData.selectedClass}
               onChange={handleInputChange}
               margin="normal"
-              sx={{ width: '50%',paddingLeft: "0px" }} 
+              sx={{ width: '50%', paddingLeft: "0px" }}
             >
               {allclass?.map((option) => (
                 <MenuItem
@@ -216,7 +216,7 @@ const scholasticAreasData = [
               value={formData.selectedMarkSheet}
               onChange={handleInputChange}
               margin="normal"
-              sx={{ width: '50%',paddingLeft: "0px" }} 
+              sx={{ width: '50%', paddingLeft: "0px" }}
             >
               {marksheet?.map((option) => (
                 <MenuItem key={option.marksheet_id} value={option}>
@@ -290,60 +290,90 @@ const scholasticAreasData = [
                       </TableRow>
                     </TableHead>
                     <TableBody>
-                     
-                        <TableRow >
-                          <TableCell>
-                           dsvbdfb
-                          </TableCell>
-                          <TableCell>dsfgsdf</TableCell>
-                          <TableCell>fdgd</TableCell>
-                          <TableCell>asgf</TableCell>
-                          <TableCell>
-                            <Button
-                              variant="outlined"
-                              onClick={handleViewClick1}
-                            >
-                              {" "}
-                              View
-                            </Button>
-                          </TableCell>
-                        </TableRow>
-                     
+
+                      <TableRow >
+                        <TableCell>
+                          dsvbdfb
+                        </TableCell>
+                        <TableCell>dsfgsdf</TableCell>
+                        <TableCell>fdgd</TableCell>
+                        <TableCell>asgf</TableCell>
+                        <TableCell>
+                          <Button
+                            variant="outlined"
+                            onClick={handleViewClick1}
+                          >
+                            {" "}
+                            View
+                          </Button>
+                        </TableCell>
+                      </TableRow>
+
                     </TableBody>
                   </Table>
-                  
-                  <Modal open={isModalOpen} onClose={handleClose1e} BackdropProps={{ onClick: handleClose1e }} style={{ display: "flex", alignItems: "center", justifyContent: "center" }} >
-        <div style={{ backgroundColor: "white", width: "50%", padding: "20px", zIndex: 9999 }}>
-          <Typography variant="h5" align="center" style={{ fontWeight: "bold",color:"black" }}>
-            Half Yearly Exam 2022-23
-          </Typography>
-          <Table>
-            <TableHead>
-              <TableRow>
-                <TableCell>Scholastic Areas</TableCell>
-                <TableCell align="center">Term - 1 (100 Marks)</TableCell>
-                <TableCell align="center">Term - 2 (100 Marks)</TableCell>
-                <TableCell align="center">Total (200 Marks)</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-             
-                <TableRow >
-                  <TableCell>dvdsd</TableCell>
-                  <TableCell align="center">sdav</TableCell>
-                  <TableCell align="center">dsv</TableCell>
-                  <TableCell align="center">sdv</TableCell>
-                </TableRow>
-           
-            </TableBody>
-          </Table>
-        </div>
-      </Modal>
 
-                      
+                  <Modal open={isModalOpen} onClose={handleClose1e} BackdropProps={{ onClick: handleClose1e }} style={{ display: "flex", alignItems: "center", justifyContent: "center" }} >
+                    <div style={{ backgroundColor: "white", width: "50%", padding: "20px", zIndex: 9999 }}>
+                      <Typography variant="h5" align="center" style={{ fontWeight: "bold", color: "black" }}>
+                        Annual Report Card 2022-23
+                      </Typography>
+                      <div style={{display:"flex"}}>
+                        <div>
+                      <Typography variant="body1" style={{ marginTop: "10px", color: "black" }}>
+                        Name:cfDfs
+                      </Typography>
+                      <Typography variant="body1" style={{ color: "black" }}>
+                        Father's Name: ADFSSDF
+                      </Typography>
+                      <Typography variant="body1" style={{ marginBottom: "10px", color: "black" }}>
+                        Date of Birth:sadFDS
+                      </Typography>
+                      </div>
+                      <div style={{ marginLeft:"50px"}}>
+                      <Typography variant="body1" style={{ marginTop: "10px", color: "black" }}>
+                      Class : dZFDS
+                      </Typography>
+                      <Typography variant="body1" style={{ color: "black" }}>
+                      Registration No.: sdFvSDGS
+                      </Typography>
+                      <Typography variant="body1" style={{ marginBottom: "10px", color: "black" }}>
+                      Roll No:dsGSDGSFg
+                      </Typography>
+                      </div>
+                      <div style={{ marginLeft:"50px"}}>
+                      <Typography variant="body1" style={{ marginTop: "10px", color: "black" }}>
+                     Section : 3
+                      </Typography>
                      
-                  
-                
+                      </div>
+                      </div>
+                      <Table style={{ border: "2px solid black" }}>
+                        <TableHead style={{ borderBottom: "3px solid black" }}>
+                          <TableRow >
+                            <TableCell style={{ borderRight: "1px solid black" }}>Scholastic Areas</TableCell>
+                            <TableCell align="center" style={{ borderRight: "1px solid black" }}>Term - 1 (100 Marks)</TableCell>
+                            <TableCell align="center" style={{ borderRight: "1px solid black" }}>Term - 2 (100 Marks)</TableCell>
+                           
+                          </TableRow>
+                        </TableHead>
+                        <TableBody>
+
+                          <TableRow >
+                            <TableCell>dvdsd</TableCell>
+                            <TableCell align="center">sdav</TableCell>
+                            <TableCell align="center">dsv</TableCell>
+                            <TableCell align="center">sdv</TableCell>
+                          </TableRow>
+
+                        </TableBody>
+                      </Table>
+                    </div>
+                  </Modal>
+
+
+
+
+
                   <TablePagination
                     rowsPerPageOptions={[5, 10, 25]}
                     component="div"
