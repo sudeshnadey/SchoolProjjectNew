@@ -1,0 +1,57 @@
+.marksheet_form{
+    margin: 10px;
+    align-items: center;
+    background-color: white;
+    border: 5px;
+    border-radius: 20px;
+    padding-bottom: 5px;
+    height: 100%;
+}
+
+.manage_marksfield_input_area{
+    height: 50%;
+}
+
+
+.manage_marksfield_input_column{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+    /* margin-right: 10%; */
+    padding-left: 10%;
+}
+
+.manage_marksfield_input_label{
+    margin-right: 10px;
+    width: 20%;
+}
+.manage_marksfield_input_box{
+    width: 50%;
+    
+}
+
+.submit_btn{
+    padding-left: 30%;
+    
+}
+.studentInfo_div{
+    border: 5px;
+    border-radius: 20px;
+    background-color: white;
+}
+.studentInfo_bar{
+        margin: 10px;
+        padding-left: 20px;
+        border-radius: 30px;
+
+    background-color: rgba(255, 255, 255, 0.281) !important;
+}
+
+.StudentInfo_bar_class{
+    margin: 10px;
+        padding-left: 20px;
+        border-radius: 10px;
+        margin: 5px;
+        box-shadow: inset 0 0 10px #999897;
+}
