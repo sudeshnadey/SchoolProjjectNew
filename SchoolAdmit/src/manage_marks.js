@@ -639,138 +639,144 @@ function MyForm() {
                     </TableBody>
                   </Table>
                   {selectedUser && (
-                    <Box
-                      position="fixed"
-                      top={0}
-                      left={0}
-                      width="100%"
-                      height="100%"
-                      display="flex"
-                      justifyContent="center"
-                      alignItems="center"
-                    >
+                    <div id="printable-content">
                       <Box
-                        position="absolute"
+                        position="fixed"
                         top={0}
                         left={0}
                         width="100%"
                         height="100%"
-                        onClick={handleClose}
-                      />
-                      <Box
-                        position="relative"
-                        width="60%"
-                        height="70%"
-                        bgcolor="white"
-                        boxShadow={2}
-                        padding={2}
-                        ref={contentRef}
+                        display="flex"
+                        justifyContent="center"
+                        alignItems="center"
                       >
-                        <Typography
-                          variant="h5"
-                          align="center"
-                          marginBottom={2}
-                          style={{ fontWeight: "bold" }}
-                        >
-                          <Box
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                          >
-                            {/* <img src="path/to/your/image.png" alt="Contact" style={{ marginRight: "10px" }} /> */}
-
-                            <img
-                              src={img1}
-                              alt="logoimage"
-                              height="104px"
-                              width="500px"
-                            ></img>
-                          </Box>
-                        </Typography>
                         <Box
-                          border="1px solid black"
-                          textAlign="center"
-                          width="400px"
-                          marginLeft="250px"
+                          position="absolute"
+                          top={0}
+                          left={0}
+                          width="100%"
+                          height="100%"
+                          onClick={handleClose}
+                        />
+                        <Box
+                          position="relative"
+                          width="60%"
+                          height="70%"
+                          bgcolor="white"
+                          boxShadow={2}
+                          padding={2}
+                          ref={contentRef}
                         >
+                          <button
+                            onClick={handlePrintPage}
+                            style={{ backgroundColor: "white" }}
+                          >
+                            Print
+                          </button>
                           <Typography
                             variant="h5"
                             align="center"
                             marginBottom={2}
                             style={{ fontWeight: "bold" }}
                           >
-                            Half Yearly Exam 2022-23
-                          </Typography>
-                        </Box>
-
-                        <div style={{ marginTop: "50px" }}>
-                          
-                          {singleHalfyearly?.map((item) => (
                             <Box
                               display="flex"
                               alignItems="center"
-                              marginBottom="10px"
+                              justifyContent="center"
                             >
-                              {/* You can add the image here using an <img> tag */}
+                              {/* <img src="path/to/your/image.png" alt="Contact" style={{ marginRight: "10px" }} /> */}
 
-                              <div>
-                                <Typography>
-                                  <span style={{ fontWeight: "bold" }}>
-                                    Roll No:{" "}
-                                  </span>
-                                  {item.rollno}
-                                </Typography>
-                                <Typography>
-                                  <span style={{ fontWeight: "bold" }}>
-                                    Name:{" "}
-                                  </span>
-                                  {item.student_name}
-                                </Typography>
-                                <Typography>
-                                  <span style={{ fontWeight: "bold" }}>
-                                    Father's Name:{" "}
-                                  </span>
-                                  {item.father_name}
-                                </Typography>
-                                <Typography>
-                                  <span style={{ fontWeight: "bold" }}>
-                                    Mother's Name:{" "}
-                                  </span>
-                                  {item.mother_name}
-                                </Typography>
-                                <Typography>
-                                  <span style={{ fontWeight: "bold" }}>
-                                    Class & Section:{" "}
-                                  </span>
-                                  {item.class} {item.section}
-                                </Typography>
-                                <Typography>
-                                  <span style={{ fontWeight: "bold" }}>
-                                    Date of Birth:{" "}
-                                  </span>
-                                  {item.dob}
-                                </Typography>
-                              </div>
-                              <div>
-                                <img
-                                  src="path/to/your/image.png"
-                                  alt="Student"
-                                  style={{ marginLeft: "400px" }}
-                                />
-                                <Typography
-                                  style={{
-                                    fontWeight: "bold",
-                                    marginLeft: "400px",
-                                  }}
-                                >
-                                  Principle's Signature
-                                </Typography>
-                              </div>
+                              <img
+                                src={img1}
+                                alt="logoimage"
+                                height="104px"
+                                width="500px"
+                              ></img>
                             </Box>
-                          ))}
-                        </div>
-                      </Box>
-                      {/* '<Box position="absolute" bottom={1} right={1}>
+                          </Typography>
+                          <Box
+                            border="1px solid black"
+                            textAlign="center"
+                            width="400px"
+                            marginLeft="250px"
+                          >
+                            <Typography
+                              variant="h5"
+                              align="center"
+                              marginBottom={2}
+                              style={{ fontWeight: "bold" }}
+                            >
+                              Half Yearly Exam 2022-23
+                            </Typography>
+                          </Box>
+
+                          <div style={{ marginTop: "50px" }}>
+                            {singleHalfyearly?.map((item) => (
+                              <Box
+                                display="flex"
+                                alignItems="center"
+                                marginBottom="10px"
+                              >
+                                {/* You can add the image here using an <img> tag */}
+
+                                <div>
+                                  <Typography>
+                                    <span style={{ fontWeight: "bold" }}>
+                                      Roll No:{" "}
+                                    </span>
+                                    {item.rollno}
+                                  </Typography>
+                                  <Typography>
+                                    <span style={{ fontWeight: "bold" }}>
+                                      Name:{" "}
+                                    </span>
+                                    {item.student_name}
+                                  </Typography>
+                                  <Typography>
+                                    <span style={{ fontWeight: "bold" }}>
+                                      Father's Name:{" "}
+                                    </span>
+                                    {item.father_name}
+                                  </Typography>
+                                  <Typography>
+                                    <span style={{ fontWeight: "bold" }}>
+                                      Mother's Name:{" "}
+                                    </span>
+                                    {item.mother_name}
+                                  </Typography>
+                                  <Typography>
+                                    <span style={{ fontWeight: "bold" }}>
+                                      Class & Section:{" "}
+                                    </span>
+                                    {item.class} {item.section}
+                                  </Typography>
+                                  <Typography>
+                                    <span style={{ fontWeight: "bold" }}>
+                                      Date of Birth:{" "}
+                                    </span>
+                                    {item.dob}
+                                  </Typography>
+                                </div>
+                                <div>
+                                  <img
+                                    src="path/to/your/image.png"
+                                    alt="Student"
+                                    style={{ marginLeft: "400px" }}
+                                  />
+                                  <Typography
+                                    style={{
+                                      fontWeight: "bold",
+                                      marginLeft: "400px",
+                                    }}
+                                  >
+                                    Principle's Signature
+                                  </Typography>
+                                </div>
+                              </Box>
+                            ))}
+                          </div>
+                        </Box>
+                        {/* '<Box position="absolute" bottom={1} right={1}>
                         <Button variant="outlined" onClick={handleClose}>
                           Close
                         </Button>
@@ -782,7 +788,8 @@ function MyForm() {
                           {isPrinting ? "Printing..." : "Print / Download PDF"}
                         </Button>
                       </Box>' */}
-                    </Box>
+                      </Box>
+                    </div>
                   )}
                   <TablePagination
                     rowsPerPageOptions={[5, 10, 25]}
@@ -858,162 +865,166 @@ function MyForm() {
                             </TableCell>
                           </TableRow>
                         ) : (
-                          <div><h2> There is No student In Section (A)</h2>
-                          <br /></div>
+                          <div>
+                            <h2> There is No student In Section (A)</h2>
+                            <br />
+                          </div>
                         )
                       )}
                     </TableBody>
                   </Table>
                   {selectedUser && (
-                    <Box
-                      position="fixed"
-                      top={0}
-                      left={0}
-                      width="100%"
-                      height="100%"
-                      display="flex"
-                      justifyContent="center"
-                      alignItems="center"
-                    >
+                    <div id="printable-content">
                       <Box
-                        position="absolute"
+                        position="fixed"
                         top={0}
                         left={0}
                         width="100%"
                         height="100%"
-                        onClick={handleClose}
-                      />
-                      <Box
-                        position="relative"
-                        width="60%"
-                        height="70%"
-                        bgcolor="white"
-                        boxShadow={2}
-                        padding={2}
-                        ref={contentRef}
+                        display="flex"
+                        justifyContent="center"
+                        alignItems="center"
                       >
-                        <Typography
-                          variant="h5"
-                          align="center"
-                          marginBottom={2}
-                          style={{ fontWeight: "bold" }}
+                        <Box
+                          position="absolute"
+                          top={0}
+                          left={0}
+                          width="100%"
+                          height="100%"
+                          onClick={handleClose}
+                        />
+                        <Box
+                          position="relative"
+                          width="60%"
+                          height="70%"
+                          bgcolor="white"
+                          boxShadow={2}
+                          padding={2}
+                          ref={contentRef}
                         >
                           <button
-                            onClick={() => window.print()}
+                            onClick={handlePrintPage}
                             style={{ backgroundColor: "white" }}
                           >
                             Print
                           </button>
-                          <Box
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                          >
-                            {/* <img src="path/to/your/image.png" alt="Contact" style={{ marginRight: "10px" }} /> */}
-
-                            <img
-                              src={img1}
-                              alt="logoimage"
-                              height="104px"
-                              width="500px"
-                            ></img>
-                          </Box>
-                        </Typography>
-                        <Box
-                          border="1px solid black"
-                          textAlign="center"
-                          width="400px"
-                          marginLeft="250px"
-                        >
                           <Typography
                             variant="h5"
                             align="center"
                             marginBottom={2}
                             style={{ fontWeight: "bold" }}
                           >
-                            Half Yearly Exam 2022-23
-                          </Typography>
-                        </Box>
-
-                        <div style={{ marginTop: "50px" }}>
-                          {singleHalfyearly?.map((item) => (
                             <Box
                               display="flex"
                               alignItems="center"
-                              marginBottom="10px"
+                              justifyContent="center"
                             >
-                              {/* You can add the image here using an <img> tag */}
+                              {/* <img src="path/to/your/image.png" alt="Contact" style={{ marginRight: "10px" }} /> */}
 
-                              <div>
-                                <Typography>
-                                  <span style={{ fontWeight: "bold" }}>
-                                    Roll No:{" "}
-                                  </span>
-                                  {item.rollno}
-                                </Typography>
-                                <Typography>
-                                  <span style={{ fontWeight: "bold" }}>
-                                    Name:{" "}
-                                  </span>
-                                  {item.student_name}
-                                </Typography>
-                                <Typography>
-                                  <span style={{ fontWeight: "bold" }}>
-                                    Father's Name:{" "}
-                                  </span>
-                                  {item.father_name}
-                                </Typography>
-                                <Typography>
-                                  <span style={{ fontWeight: "bold" }}>
-                                    Mother's Name:{" "}
-                                  </span>
-                                  {item.mother_name}
-                                </Typography>
-                                <Typography>
-                                  <span style={{ fontWeight: "bold" }}>
-                                    Class & Section:{" "}
-                                  </span>
-                                  {item.class} {item.section}
-                                </Typography>
-                                <Typography>
-                                  <span style={{ fontWeight: "bold" }}>
-                                    Date of Birth:{" "}
-                                  </span>
-                                  {item.dob}
-                                </Typography>
-                              </div>
-                              <div>
-                                <img
-                                  src="path/to/your/image.png"
-                                  alt="Student"
-                                  style={{ marginLeft: "400px" }}
-                                />
-                                <Typography
-                                  style={{
-                                    fontWeight: "bold",
-                                    marginLeft: "400px",
-                                  }}
-                                >
-                                  Principle's Signature
-                                </Typography>
-                              </div>
+                              <img
+                                src={img1}
+                                alt="logoimage"
+                                height="104px"
+                                width="500px"
+                              ></img>
                             </Box>
-                          ))}
-                        </div>
-                      </Box>
-                      <Box position="absolute" bottom={1} right={1}>
+                          </Typography>
+                          <Box
+                            border="1px solid black"
+                            textAlign="center"
+                            width="400px"
+                            marginLeft="250px"
+                          >
+                            <Typography
+                              variant="h5"
+                              align="center"
+                              marginBottom={2}
+                              style={{ fontWeight: "bold" }}
+                            >
+                              Half Yearly Exam 2022-23
+                            </Typography>
+                          </Box>
+
+                          <div style={{ marginTop: "50px" }}>
+                            {singleHalfyearly?.map((item) => (
+                              <Box
+                                display="flex"
+                                alignItems="center"
+                                marginBottom="10px"
+                              >
+                                {/* You can add the image here using an <img> tag */}
+
+                                <div>
+                                  <Typography>
+                                    <span style={{ fontWeight: "bold" }}>
+                                      Roll No:{" "}
+                                    </span>
+                                    {item.rollno}
+                                  </Typography>
+                                  <Typography>
+                                    <span style={{ fontWeight: "bold" }}>
+                                      Name:{" "}
+                                    </span>
+                                    {item.student_name}
+                                  </Typography>
+                                  <Typography>
+                                    <span style={{ fontWeight: "bold" }}>
+                                      Father's Name:{" "}
+                                    </span>
+                                    {item.father_name}
+                                  </Typography>
+                                  <Typography>
+                                    <span style={{ fontWeight: "bold" }}>
+                                      Mother's Name:{" "}
+                                    </span>
+                                    {item.mother_name}
+                                  </Typography>
+                                  <Typography>
+                                    <span style={{ fontWeight: "bold" }}>
+                                      Class & Section:{" "}
+                                    </span>
+                                    {item.class} {item.section}
+                                  </Typography>
+                                  <Typography>
+                                    <span style={{ fontWeight: "bold" }}>
+                                      Date of Birth:{" "}
+                                    </span>
+                                    {item.dob}
+                                  </Typography>
+                                </div>
+                                <div>
+                                  <img
+                                    src="path/to/your/image.png"
+                                    alt="Student"
+                                    style={{ marginLeft: "400px" }}
+                                  />
+                                  <Typography
+                                    style={{
+                                      fontWeight: "bold",
+                                      marginLeft: "400px",
+                                    }}
+                                  >
+                                    Principle's Signature
+                                  </Typography>
+                                </div>
+                              </Box>
+                            ))}
+                          </div>
+                        </Box>
+                        {/* <Box position="absolute" bottom={1} right={1}>
                         <Button variant="outlined" onClick={handleClose}>
                           Close
                         </Button>
                         <Button
                           variant="outlined"
-                          onClick={handlePrint}
+                          onClick={handlePrintPage}
                           disabled={isPrinting}
                         >
                           {isPrinting ? "Printing..." : "Print / Download PDF"}
                         </Button>
+                      </Box> */}
                       </Box>
-                    </Box>
+                    </div>
                   )}
                   <TablePagination
                     rowsPerPageOptions={[5, 10, 25]}
