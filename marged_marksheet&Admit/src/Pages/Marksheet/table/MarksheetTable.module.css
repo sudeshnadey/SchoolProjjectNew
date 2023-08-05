@@ -1,0 +1,38 @@
+.marksheet{
+    display: flex;
+    overflow-Y: auto;
+    overflow-X: auto;
+  flex-direction: column;
+  align-items: center;
+  width: auto ;
+  height: 70%;
+  background-color: rgba(255, 255, 255, 0.508); 
+  /* backdrop-filter: blur(10px);  */
+}
+table {
+    border: 2px solid rgb(50, 50, 45);
+    width: 100%;
+    /* height: 500px; */
+    background-color: white;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+td.headtd {
+    border: 2px solid rgb(255, 255, 255);
+}
+
+td {
+    text-align: center;
+    border: 2px solid rgb(221, 206, 124);
+}
+th{
+    border: 2px solid rgb(24, 25, 24); 
+}
+.studentInfo {
+    width: 100%;
+}
